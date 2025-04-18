@@ -24,7 +24,7 @@ app.get('/posts', async (req, res) => {
       const latestPosts = await getLatestPosts();
       res.json(latestPosts);
     } else {
-      res.status(400).json({ error: "Invalid parameter value. Please use 'popular' or 'latest'." });
+      res.status(400).json({ error: "Invalid parameter value. Please use latest." });
     }
   } catch (err) {
     console.error('Error in /posts route:', err);
